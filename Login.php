@@ -56,8 +56,8 @@
             <br>
             <input type="password" name="pass">
             <br>
-            <input type="submit" value="Login" name="login">
-            <input type='button' value='logout' name='logout' onclick="session_destroy()">
+            <input type="submit" value="Login" name="login" style="">
+            <input type='button' value='logout' name='logout' onclick="session_destroy()" style="">
             <br>
             <br>
             <label>No account? Create one now!</label>

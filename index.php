@@ -3,9 +3,10 @@
 
     require_once('database.php');
     require_once('Functions.php');
-   // session_start();
-   // if(!$_SESSION['loggedIn'])header("Location:Login.php");
+    session_start();
+    if(!$_SESSION['loggedIn'])header("Location:Login.php");
     $sql_fruits = sql_fruits($db);
+
 
 ?>
 
@@ -19,6 +20,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <img src="images\logo.png" style="max-width: 300px; margin: auto" width="50%">
@@ -30,7 +32,7 @@
         <ul>
             <li><a href="popular.php">Popular Picks</a></li>
             <li><a href="AllFruits.php">All our Fruits</a></li>
-            <li><a href="#tbt">Exotics</a></li>
+            <li><a href="exotics.php">Exotics</a></li>
             <li><a href="cart.php">Cart</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="Login.php">Log In</a></li>

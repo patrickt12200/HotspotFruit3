@@ -126,4 +126,41 @@ function CreateAccount($email,$uname,$password,$db){
         print("$insert");
     }
 }
+
+// -------------------------------------------------------------
+// ----------  Cart Functions Start Here ----------------------
+// -------------------------------------------------------------
+
+function addItem($item, $quantity){
+    global $fruits;
+    if($quantity < 1) return;
+
+    if(isset($_SESSION['cart'][$item])){
+        $quantity += $_SESSION['cart'][$item]['qty'];
+
+    }
+}
+
+function removeItem($item, $quantity){
+
+}
+
+function getTotal(){
+    $subtotal = 0;
+}
+
+function update_item($item, $quantity){
+    $quantity = (int) $quantity;
+    if(isset($_SESSION['cart'][$item])){
+        if($quantity <= 0){
+            unset($_SESSION['cart'][$item]);
+        }
+        else{
+            $_SESSION['cart'][$item]['qty'] = $quantity;
+            $total = $_SESSION['cart'][$item]['cost'] *
+                $_SESSION['cart'][$item]['$qty'];
+            $_SESSION['cart'][$item]['total'] = $total;
+        }
+    }
+}
 ?>

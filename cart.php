@@ -2,14 +2,29 @@
     // Will check Database avalability.
     require_once('database.php');
     require_once('Functions.php');
-    session_start();
+    //session_start();
 
     if(!$_SESSION['loggedIn'])header("Location:Login.php");
     $prod = $db->prepare("SELECT * FROM fruitdata order by ID");
     $prod->execute();
 
+    if(empty($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
+
+    $action = filter_input(INPUT_POST, 'action');
+    if($action === NULL){
+        $action = filter_input(INPUT_GET, 'action');
+        if($action === Null){
+            $action = 'show_add_item';
+        }
+    }
+
     $foundProd =$prod->fetchAll((PDO::FETCH_ASSOC));
     include('Taskbar.php');
+
+
+
 ?>
 
 <!DOCTYPE html>

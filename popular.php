@@ -19,11 +19,12 @@
     <title>Popular</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
-<body>
 <h1 class="popularHead">Popular</h1>
 <p class="description">Our Most Bestest Fruits!</p>
 <p class="description">Give us your money, today!</p>
-<div class="row">
+
+<div id="allOurFruit">
+    <div class="row">
         <div class="column">
             <div class="card">
              <img src="images/banana.jpg" class="column_img">
@@ -36,7 +37,6 @@
 
     </div>
         </div>
-
 
 <div class="column">
     <div class="card">
@@ -52,7 +52,7 @@
 </div>
 </div>
 
-<div class="row">
+    <div class="row">
     <div class="column">
         <div class="card">
             <img src="images/dragonfruit.jpg" class="column_img">
@@ -64,11 +64,43 @@
                  </div>
         </div>
     </div>
+    <div class="column">
+        <div class="card">
+            <img src="images/guava.jpg" class="column_img">
+            <div class="container">
+                <h2 class="title">Guava</h2>
+                <p class="description">Unusually sweet, probably you're new favorite</p>
+                <p class="price">$1.99/lb</p>
+                <p><button class="button">Add to Cart</button></p>
+            </div>
+        </div>
+    </div>
+    </div>
+        <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="images/passionfruit.jpg" class="column_img">
+                <div class="container">
+                    <h2 class="title">Passion Fruit</h2>
+                    <p class="description">Kind of looks gross, but tastes like a kiwi and a pineapple had a baby.</p>
+                    <p class="price">$24.99/lb</p>
+                    <p><button class="button">Add to Cart</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="images/jackfruit.jpg" class="column_img">
+                <div class="container">
+                    <h2 class="title">JackFruit</h2>
+                    <p class="description">Basically a repackaged mango</p>
+                    <p class="price">$5.99/lb</p>
+                    <p><button class="button">Add to Cart</button></p>
+                </div>
+            </div>
+        </div>
 </div>
-<div class="column"
 </div>
 
-
-    
 </body>
 </html>
