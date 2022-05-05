@@ -17,7 +17,8 @@ if($action === NULL){
     }
 }
 
-$sql_fruits = sql_fruits($db);
+
+$get_sql_fruits = sql_fruits($db);
 include('Taskbar.php') ?>
 <br>
 
@@ -32,17 +33,19 @@ include('Taskbar.php') ?>
     <title>Document</title>
 </head>
 <body>
+<form action='.' method="post">
 <div id='allOurFruit'>
     <div class="row">
         <div class="column">
             <div class="card">
                 <img src="images/banana.jpg" class="column_img">
                 <div class="container">
+                <input type="hidden" name="action" value="add">
                     <h2 class="title" id="banana">American Banana</h2>
                     <p class="description">An American Favorite. If you hate it, you're not normal</p>
                     <p class="price">$2.99/lb</p>
-                    <p><button class="button">Add to Cart</button> </p>
-                    <select name="itemqty_banana">
+                    <p><input type="submit" class="button" value="Add to Cart" formaction="cart.php"></p>
+                    <select name="itemqty">
                         <?php
                             for($x=1; $x < 10;$x++){
                                 ?>
@@ -53,6 +56,7 @@ include('Taskbar.php') ?>
                 </div>
             </div>
         </div>
+        
 
         <div class="column">
             <div class="card">
@@ -198,7 +202,8 @@ include('Taskbar.php') ?>
             </div>
         </div>
     </div>
-
+    </form>
+                        
 </div>
 
 <span>
